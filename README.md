@@ -1,0 +1,1 @@
+It is a Ruby On Rials sample_app teached by micheal hartl and done by G.Rakesh
