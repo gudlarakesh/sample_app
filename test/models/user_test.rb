@@ -52,8 +52,7 @@ test "email address should unique" do
 end
 
 test "password should have a minimum length" do
-  @user.password = "a" * 5
-  @user.password_confirmation = "a" * 5
+  @user.password =  @user.password_confirmation = "a" * 5
   assert_not @user.valid?
 end
 
