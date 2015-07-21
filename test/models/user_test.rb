@@ -26,11 +26,6 @@ test "name should not be too long" do
   assert_not @user.valid?
 end
 
-test "email should not be too long" do
-  @user.email = "a" * 256
-  assert_not @user.valid?
-end
-
 test "email validation should accept valid addresses" do
   valid_addresses = %w[user@example.com USER@foo.COM A_US-ER@foo.bar.org
                        first.last@foo.jp alice+bob@baz.en]
@@ -55,5 +50,12 @@ test "email address should unique" do
   @user.save
   assert_not duplicate_user.valid?
 end
+
+test "password should have a minimum length" do
+  @user.password = "a" * 5
+  @user.password_confirmation = "a" * 5
+  assert_not @user.valid?
+end
+
 end
  
