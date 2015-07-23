@@ -1,4 +1,4 @@
 rakesh:
-  name:Rakesh Example
+  name: Rakesh Example
   email: rakesh@example.com
   password_digest: <%= User.digest('password') %>
