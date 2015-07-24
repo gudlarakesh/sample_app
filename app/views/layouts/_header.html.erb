@@ -12,7 +12,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><%= link_to "Profile", current_user %></li>
-              <li><%= link_to "settings", '#' %></li>
+              <li><%= link_to "settings", edit_user_path(current_user) %></li>
               <li class="divider"></li>
               <li>
                 <%= link_to "Log Out", logout_path, method: "delete" %>
